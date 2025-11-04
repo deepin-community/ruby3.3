@@ -1,3 +1,9 @@
+ruby3.3 (3.3.8-2deepin1) unstable; urgency=medium
+
+  * chore: update libruby3.3.symbols file for sw64
+
+ -- hudeng <hudeng@deepin.org>  Tue, 04 Nov 2025 13:52:43 +0800
+
 ruby3.3 (3.3.8-2) unstable; urgency=medium
 
   [ Antonio Terceiro ]
