@@ -1,0 +1,15 @@
+# list of gems to not be used for Provides: as they are available through
+# standalone packages. We prefer that dependency resolution uses those
+# packages.
+base64
+bundler
+csv
+did_you_mean
+ipaddr
+json
+minitest
+power_assert
+psych
+rake
+ruby2_keywords
+test-unit
