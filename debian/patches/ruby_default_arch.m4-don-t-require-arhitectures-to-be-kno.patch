@@ -1,0 +1,25 @@
+From: Antonio Terceiro <terceiro@debian.org>
+Date: Mon, 4 Oct 2021 14:02:15 +0000
+Subject: ruby_default_arch.m4: don't require arhitectures to be known ahead
+ of time
+
+Not sure yet if this should be forwarded upstream or not.
+
+Reviewed-By: Lucas Kanashiro <kanashiro@debian.org>
+Last-Update: 2023-10-03
+---
+ tool/m4/ruby_default_arch.m4 | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tool/m4/ruby_default_arch.m4 b/tool/m4/ruby_default_arch.m4
+index 2f25ba8..30f5f9c 100644
+--- a/tool/m4/ruby_default_arch.m4
++++ b/tool/m4/ruby_default_arch.m4
+@@ -10,6 +10,7 @@ AS_CASE([$1:"$host_cpu"],
+     [[i[3-6]86]:x86_64], [ARCH_FLAG=-m32],
+     [ppc64:ppc*],        [ARCH_FLAG=-m64],
+     [ppc*:ppc64],        [ARCH_FLAG=-m32],
++    [*],                 [],
+     [
+     ARCH_FLAG=
+     for flag in "-arch "$1 -march=$1; do
